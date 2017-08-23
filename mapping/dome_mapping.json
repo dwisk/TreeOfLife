@@ -1,0 +1,40 @@
+[
+	{
+		"name": "boards",
+		"alias": "lightboards",
+		"pixelColorCorrection": true,
+		"createStrips": true,
+		"strips": [
+			{ "serial": [{"nbr": 0, "from": 0, "to": 239}]},
+			{ "serial": [{"nbr": 1, "from": 0, "to": 239}]},
+			{ "serial": [{"nbr": 2, "from": 0, "to": 239}]},
+			{ "serial": [{"nbr": 3, "from": 0, "to": 239}]}
+
+
+		]
+	},
+	{
+		"name": "everything",
+		"alias": "dome",
+		"pixelColorCorrection": true,
+		"createStrips": true,
+		"strips": [
+			{ "serial": [{"nbr": 0, "from": 0, "to": 119}]},
+			{ "serial": [{"nbr": 1, "from": 0, "to": 119}]},
+			{ "serial": [{"nbr": 2, "from": 0, "to": 119}]},
+			{ "serial": [{"nbr": 3, "from": 0, "to": 119}]},
+			{ "serial": [{"nbr": 4, "from": 0, "to": 119}]},
+			{ "serial": [{"nbr": 5, "from": 0, "to": 119}]},
+			{ "serial": [{"nbr": 6, "from": 0, "to": 119}]},
+
+			{ "serial": [{"nbr": 0, "from": 239, "to": 120}]},
+			{ "serial": [{"nbr": 1, "from": 239, "to": 120}]},
+			{ "serial": [{"nbr": 2, "from": 239, "to": 120}]},
+			{ "serial": [{"nbr": 3, "from": 239, "to": 120}]},
+			{ "serial": [{"nbr": 4, "from": 239, "to": 120}]},
+			{ "serial": [{"nbr": 5, "from": 239, "to": 120}]},
+			{ "serial": [{"nbr": 6, "from": 239, "to": 120}]}
+
+		]
+	}
+]
