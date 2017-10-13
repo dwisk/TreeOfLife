@@ -6,8 +6,7 @@ module.exports = [
 		"name": "everything",
 		"pixelColorCorrection": false,
 		"csv": {
-			"delimiter": "tab",
-			"groupStrips": 8,
+			"group": 10,
 			"file": "./mapping/tree_mapping.csv"
 		}
 	},
@@ -19,8 +18,7 @@ module.exports = [
 		"name": "branch_0",
 		"pixelColorCorrection": false,
 		"csv": {
-			"delimiter": "tab",
-			"groupStrips": 8,
+			"group": 10,
 			"file": "./mapping/tree_branch0.csv"
 		}
 	},
@@ -28,8 +26,7 @@ module.exports = [
 		"name": "branch_1",
 		"pixelColorCorrection": false,
 		"csv": {
-			"delimiter": "tab",
-			"groupStrips": 8,
+			"group": 10,
 			"file": "./mapping/tree_branch1.csv"
 		}
 	},
@@ -37,8 +34,7 @@ module.exports = [
 		"name": "branch_2",
 		"pixelColorCorrection": false,
 		"csv": {
-			"delimiter": "tab",
-			"groupStrips": 8,
+			"group": 10,
 			"file": "./mapping/tree_branch2.csv"
 		}
 	},
@@ -46,8 +42,7 @@ module.exports = [
 		"name": "branch_3",
 		"pixelColorCorrection": false,
 		"csv": {
-			"delimiter": "tab",
-			"groupStrips": 8,
+			"group": 10,
 			"file": "./mapping/tree_branch3.csv"
 		}
 	},
@@ -60,8 +55,7 @@ module.exports = [
 		"name": "root_0",
 		"pixelColorCorrection": false,
 		"csv": {
-			"delimiter": "tab",
-			"groupStrips": 8,
+			"group": 1,
 			"file": "./mapping/tree_root0.csv"
 		}
 	},
@@ -69,8 +63,7 @@ module.exports = [
 		"name": "root_1",
 		"pixelColorCorrection": false,
 		"csv": {
-			"delimiter": "tab",
-			"groupStrips": 8,
+			"group": 1,
 			"file": "./mapping/tree_root1.csv"
 		}
 	},
@@ -78,8 +71,7 @@ module.exports = [
 		"name": "root_2",
 		"pixelColorCorrection": false,
 		"csv": {
-			"delimiter": "tab",
-			"groupStrips": 8,
+			"group": 1,
 			"file": "./mapping/tree_root2.csv"
 		}
 	},
@@ -87,8 +79,7 @@ module.exports = [
 		"name": "root_3",
 		"pixelColorCorrection": false,
 		"csv": {
-			"delimiter": "tab",
-			"groupStrips": 8,
+			"group": 1,
 			"file": "./mapping/tree_root3.csv"
 		}
 	},

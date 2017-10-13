@@ -34,6 +34,39 @@ module.exports = [
 	},
 
 	{
+		"name": "root_0",
+		"pixelColorCorrection": false,
+		"createStrips": true,
+		"strips": [
+			{ "serial": [{"nbr": 0, "from": 0, "to": 1}]}
+		]
+	},
+	{
+		"name": "root_1",
+		"pixelColorCorrection": false,
+		"createStrips": true,
+		"strips": [
+			{ "serial": [{"nbr": 0, "from": 2, "to": 3}]}
+		]
+	},
+	{
+		"name": "root_2",
+		"pixelColorCorrection": false,
+		"createStrips": true,
+		"strips": [
+			{ "serial": [{"nbr": 0, "from": 4, "to": 5}]}
+		]
+	},
+	{
+		"name": "root_3",
+		"pixelColorCorrection": false,
+		"createStrips": true,
+		"strips": [
+			{ "serial": [{"nbr": 0, "from": 6, "to": 7}]}
+		]
+	},
+
+	{
 		"name": "everything",
 		"pixelColorCorrection": false,
 		"createStrips": true,

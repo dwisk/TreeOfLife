@@ -6,42 +6,7 @@
 		"icon": "entypo/adjust",
 		"module": "./games/TouchSelect"
 	},
-	{
-		"name": "Gameshow",
-		"default": true,
-		"title": "Two colored",
-		"icon": "entypo/adjust",
-		"module": "../games/PixelNode_Game_EffectQueue",
-		"inputs": {
-			"color_left": "inputs.rgb.color_left",
-			"color_right": "inputs.rgb.color_right",
-			"touches": "touch.touches"
-		},
-		"queue": [
-			{ "effect": "RedBlue", "duration": 30000 },
-			{ "effect": "Fire", "duration": 30000 },
-			{ "effect": "Heartbeat", "duration": 30000 },
-			{ "effect": "RainBow", "duration": 30000 },
 
-
-			{ "effect": "ColouredRain", "duration": 30000 },
-			{ "effect": "RedBlue", "duration": 30000 },
-			{ "effect": "Glitter", "duration": 30000 },
-			{ "effect": "Rain", "duration": 30000 },
-			{ "effect": "Ray", "duration": 30000 },
-			{ "effect": "RainBowRings", "duration": 30000 }
-		],
-		"queue_full": [
-			{ "effect": "ColouredRain", "duration": 30000 },
-			{ "effect": "RedBlue", "duration": 30000 },
-			{ "effect": "Glitter", "duration": 30000 },
-			{ "effect": "Rain", "duration": 30000 },
-			{ "effect": "Rain", "duration": 30000 },
-			{ "effect": "Ray", "duration": 7000 },
-			{ "effect": "RedBlue", "duration": 7000 },
-			{ "effect": "RainBowRings", "duration": 30000 }
-		]
-	},
 	{
 		"name": "Cuts",
 		"default": true,
@@ -57,6 +22,5 @@
 			{ "effect": "Cuts", "duration": 30000 }
 		]
 	}
-
 
 ]

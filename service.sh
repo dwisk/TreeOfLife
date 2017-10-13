@@ -16,27 +16,21 @@
 # Carry out specific functions when asked to by the system
 case "$1" in
   start)
-    echo "Starting FadeCandy"
-    nohup /root/fadecandy/bin/fcserver-rpi > /dev/null 2>&1 &
     echo "Starting Pixelnode"
-    cd /root/TreeOfLife
-    nohup /root/node . > /dev/null 2>/var/log/pixelnode_error.log &
+    cd /SoLM/TreeOfLife
+    nohup /SoLM/node sound > /dev/null 2>/var/log/pixelnode_error.log &
     ;;
   stop)
-    echo "Lightcave stopping"
-    killall fcserver-rpi
+    echo "Pixelnode stopping"
     killall node
     ;;
   restart)
-    echo "Lightcave stopping"
-    killall fcserver-rpi
+    echo "Pixelnode stopping"
     killall node
 
-    echo "Starting FadeCandy"
-    nohup /root/fadecandy/bin/fcserver-rpi > /dev/null 2>&1 &
     echo "Starting Pixelnode"
-    cd /root/TreeOfLife
-    nohup /root/node . > /dev/null 2>/var/log/pixelnode_error.log &
+    cd /SoLM/TreeOfLife
+    nohup /SoLM/node sound > /dev/null 2>/var/log/pixelnode_error.log &
     ;;
 
   *)

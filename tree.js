@@ -75,8 +75,8 @@ new PixelNode({
 				"i2c_bus": 1,
 				"offset": 0,
 				"verbose": true,
-				"treshold_touch": 20,
-				"treshold_release": 24
+				"treshold_touch": 12,
+				"treshold_release": 4
 
 			}
 		],

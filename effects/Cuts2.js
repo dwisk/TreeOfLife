@@ -62,25 +62,35 @@ PixelNode_Effect_Cuts.prototype.drawTarget = function(target, output) {
 
 	for (var ring = 0; ring < target.length;ring++) {
     for (var pixel = 0; pixel < target[ring].length; pixel++) {
-      target[ring][pixel] = [64,64,64];
+      var mod = pixel % 2;
+      //console.log(pixel,mod);
+      if (mod < 1) {
+        target[ring][pixel] = [0,0,255];
+      } else {
+         target[ring][pixel] = [255,0,0];
+      }
     }
-    switch(ring) {
-      case 1:
-        for (var pixel = 0; pixel < 64; pixel++) {
-          target[ring][pixel] = [0,255,0];
-        }
-        break;
-      case 3:
-      case 5:
-      case 7:
 
-        break;
-        case 0:
-        case 2:
-        case 4:
-        case 6:
-        break;
-    }
+    // for (var pixel = 0; pixel < target[ring].length; pixel++) {
+    //   target[ring][pixel] = [64,64,64];
+    // }
+    // switch(ring) {
+    //   case 1:
+    //     for (var pixel = 0; pixel < 64; pixel++) {
+    //       target[ring][pixel] = [0,255,0];
+    //     }
+    //     break;
+    //   case 3:
+    //   case 5:
+    //   case 7:
+    //
+    //     break;
+    //     case 0:
+    //     case 2:
+    //     case 4:
+    //     case 6:
+    //     break;
+    // }
 
 	}
 }

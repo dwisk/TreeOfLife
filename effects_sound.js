@@ -34,7 +34,7 @@ module.exports = [
 "name": "Heartbeat",
 "module": "../effects/PixelNode_Effect_Off",
 "outputs": [{"name": "glow","targets": ["everything.rings"]}],
-"sound": { file: "heartbeat.mp3", volume: 100 }
+"sound": { file: "Heartbeat.mp3", volume: 100 }
 },
 	{
 		"name": "Color",
@@ -65,31 +65,36 @@ module.exports = [
 		"name": "RainBow",
 		"module": "../effects/PixelNode_Effect_Off",
 		"outputs": [{"name": "glow","targets": ["everything.rings"]}],
-		"sound": { file: "rainbow.mp3", volume: 100 }
+		"sound": { file: "Birds.mp3", volume: 100 }
 	},
 	{
 		"name": "RainBowRings",
 		"module": "../effects/PixelNode_Effect_Off",
 		"outputs": [{"name": "glow","targets": ["everything.rings"]}],
-		"sound": { file: "rainbow.mp3", volume: 100 }
+		"sound": { file: "Birds.mp3", volume: 100 }
 	},
 	{
 		"name": "Fire",
 		"module": "../effects/PixelNode_Effect_Off",
 		"outputs": [{"name": "glow","targets": ["everything.rings"]}],
-		"sound": { file: "fire.mp3", volume: 100 }
+		"sound": { file: "Fire.mp3", volume: 100 }
 	},
 	{
-		"name": "Rain",
+		"name": "RedBlue",
 		"module": "../effects/PixelNode_Effect_Off",
 		"outputs": [{"name": "glow","targets": ["everything.rings"]}],
 		"sound": { file: "rain.mp3", volume: 100 }
 	},
 	{
-		"name": "ColouredRain",
+		"name": "Rain",
 		"module": "../effects/PixelNode_Effect_Off",
 		"outputs": [{"name": "glow","targets": ["everything.rings"]}],
-		"sound": { file: "fireworks.mp3", volume: 100 }
+		"sound": { file: "Rain.mp3", volume: 100 }
+	},
+	{
+		"name": "ColouredRain",
+		"module": "../effects/PixelNode_Effect_Off",
+		"outputs": [{"name": "glow","targets": ["everything.rings"]}]
 	},
 	{
 		"name": "Off",

@@ -84,10 +84,12 @@ new PixelNode({
 
 var soundTimeout = false;
 global.pixelNode.data.on("changed_TouchSelect_effect", function(paths, effect) {
+	console.log("Play Sound?",effect,effect.sound,soundTimeout);
 	if (effect.sound && soundTimeout == false) {
+		console.log("Play Sound: Timeout started");
 		soundTimeout = setTimeout(function() {
+			require('child_process').spawn('sh', ['sound.sh',effect.sound.file,effect.sound.volume], {stdio: 'ignore'});
 			console.log("Play Sound:".bold,effect.sound.file,"at volume:",effect.sound.volume);
-			require('child_process').spawn('sh', ['sound.sh',effect.sound.file,effect.sound.volume], {stdio: 'inherit'});
 			soundTimeout = false;
 		},50);
 	}

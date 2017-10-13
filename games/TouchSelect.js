@@ -39,9 +39,9 @@ module.exports = PixelNode_Game_TouchSelect;
  * ==================================================================================================================== */
 
  PixelNode_Game_TouchSelect.prototype.default_options = {
-   defaultEffect: "Direction",
-   forceDirection: true,
-   initialDirection: 1,
+   defaultEffect: "ColouredRain",
+   forceDirection: false,
+   initialDirection: 3,
    effects: [
      "Heartbeat",
      "Fire",
@@ -82,14 +82,15 @@ PixelNode_Game_TouchSelect.prototype.init = function() {
   self.effectBranch[2] = self.getEffectByName("Branch2");
   self.effectBranch[3] = self.getEffectByName("Branch3");
   self.defaultEffect = self.getEffectByName(self.options.defaultEffect);
+  self.afterEffect = self.getEffectByName("Direction");
 
   if (self.options.forceDirection) {
     self.setActiveBranch(self.options.initialDirection);
   }
 
-  if (self.options.afterEffect) {
-    self.afterEffect = self.getEffectByName(self.options.afterEffect);
-  }
+  // if (self.options.afterEffect) {
+  //   self.afterEffect = self.getEffectByName(self.options.afterEffect);
+  // }
 
 
 	if (global.config.inputMode == "server") {
@@ -116,12 +117,12 @@ PixelNode_Game_TouchSelect.prototype.effectSelector = function() {
   var touches = global.pixelNode.data.fastGet(["inputs","touch","touches"]);
 
   if (!self.locked) {
-    if ((self.activeBranch == 0 || self.activeBranch == -1)) self.branchSelector(touches[10], 0, "Rain", 10000); // "Heartbeat"
-    if ((self.activeBranch == 1 || self.activeBranch == -1)) self.branchSelector(touches[8], 1, "RainBowRings", 10000); // "Fire"
-    if ((self.activeBranch == 2 || self.activeBranch == -1)) self.branchSelector(touches[9], 2, "Heartbeat", 10000); // "Rain"
-    if ((self.activeBranch == 3 || self.activeBranch == -1)) self.branchSelector(touches[11], 3, "Fire", 10000); // "RainBowRings"
+    if ((self.activeBranch == 0 || self.activeBranch == -1)) self.branchSelector(touches[10], 0, "RainBowRings", 10000); // "Heartbeat"
+    if ((self.activeBranch == 1 || self.activeBranch == -1)) self.branchSelector(touches[8], 1, "Rain", 10000); // "Fire"
+    if ((self.activeBranch == 2 || self.activeBranch == -1)) self.branchSelector(touches[9], 2, "Fire", 10000); // "Rain"
+    if ((self.activeBranch == 3 || self.activeBranch == -1)) self.branchSelector(touches[11], 3, "Heartbeat", 10000); // "RainBowRings"
   }
-  self.branchSelector(touches[8] && touches[9] && touches[10] && touches[11], -1, "ColouredRain", 20000);
+  self.branchSelector(touches[8] && touches[9] && touches[10] && touches[11], -1, "Glitter", 20000);
 }
 
 PixelNode_Game_TouchSelect.prototype.branchSelector = function(touched, number, effect, duration) {
@@ -135,7 +136,7 @@ PixelNode_Game_TouchSelect.prototype.branchSelector = function(touched, number, 
       self.timeouts[number] = setTimeout(function() {
          self.setEffectByName(effect);
          if (self.options.forceDirection) {
-           self.setActiveBranch(number+1);
+           self.setActiveBranch(number-1);
          }
          self.locked = true;
          self.resetTimers();
@@ -144,19 +145,22 @@ PixelNode_Game_TouchSelect.prototype.branchSelector = function(touched, number, 
            self.setEffectByName(self.options.defaultEffect);
            self.pixelDataOff();
          }, duration);
-      }, 2000);
+      }, 1500);
     }
     clearTimeout(self.cleartimeouts[number]);
 
     self.doEffectBranch[number] = true;
+
   } else if (self.timeouts[number] != null) {
+    console.log("Clearout?");
     self.cleartimeouts[number] = setTimeout(function() {
+        console.log("Clearout!");
 
         self.doEffectBranch[number] = false;
         self.pixelDataOff();
         clearTimeout(self.timeouts[number]);
         self.timeouts[number] = null;
-    }, 250);
+    }, 350);
 
   }
 }
@@ -184,9 +188,11 @@ PixelNode_Game_TouchSelect.prototype.resetTimers = function() {
 
 PixelNode_Game_TouchSelect.prototype.setActiveBranch = function(number) {
   var self = this;
+  if (number>3) number = 0;
+  if (number<0) number = 3;
   self.activeBranch = number;
-  if (self.activeBranch>3) self.activeBranch = 0;
-  self.defaultEffect.activeOutput = "branch_"+self.activeBranch;
+  self.afterEffect.activeOutput = "branch_"+self.activeBranch;
+  self.afterEffect.activeId = self.activeBranch;
 }
 
 PixelNode_Game_TouchSelect.prototype.pixelDataOff = function() {
@@ -207,7 +213,7 @@ PixelNode_Game_TouchSelect.prototype.draw = function() {
   if (!self.locked && self.doEffectBranch[1] && (self.activeBranch == 1 || self.activeBranch == -1)) self.effectBranch[1].draw();
   if (!self.locked && self.doEffectBranch[2] && (self.activeBranch == 2 || self.activeBranch == -1)) self.effectBranch[2].draw();
   if (!self.locked && self.doEffectBranch[3] && (self.activeBranch == 3 || self.activeBranch == -1)) self.effectBranch[3].draw();
-  if (self.afterEffect) self.afterEffect.draw();
+  if (!self.locked && self.afterEffect && self.options.forceDirection) self.afterEffect.draw();
 
 }
 
