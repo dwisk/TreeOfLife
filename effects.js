@@ -1,68 +1,4 @@
 module.exports = [
-	{
-	"name": "Branch3",
-	"touch": "10",
-	"module": "./effects/Heartbeat",
-	"outputs": [
-		{
-			"name": "ray",
-			"targets": [
-				"branch_3.strips"
-			]
-		}
-	]
-	},
-	{
-	"name": "Branch2",
-	"touch": "8",
-	"module": "./effects/Fire",
-	"outputs": [
-		{
-			"name": "ray",
-			"targets": [
-				"branch_2.strips"
-			]
-		}
-	]
-	},
-
-
-	{
-	"name": "Branch1",
-	"touch": "9",
-	"module": "../effects/PixelNode_Effect_ColouredRain",
-	"speed": 0,
-	"direction": 1,
-	"intensity": 0.25,
-	"fixedColor": [0,0,255],
-	"outputs": [
-		{
-			"name": "ray",
-			"targets": [
-				"branch_1.strips"
-			]
-		}
-	]
-	},
-
-	{
-	"name": "Branch0",
-	"touch": "11",
-	"module": "../effects/PixelNode_Effect_Rainbow",
-	"scale": 1,
-	"speed": 100,
-	"outputs": [
-		{
-			"name": "rainbow",
-			"targets": [
-				"branch_0.strips"
-			]
-		}
-	]
-	},
-
-
-
 
 {
 "name": "Heartbeat",
@@ -76,36 +12,6 @@ module.exports = [
 	}
 ],
 "sound": { file: "Heartbeat.mp3", volume: 100 }
-},
-{
-	"name": "Direction",
-	"module": "./effects/Direction",
-	"outputs": [
-		{
-			"name": "branch_0",
-			"targets": [
-				"root_0.rings"
-			]
-		},
-		{
-			"name": "branch_1",
-			"targets": [
-				"root_1.rings"
-			]
-		},
-		{
-			"name": "branch_2",
-			"targets": [
-				"root_2.rings"
-			]
-		},
-		{
-			"name": "branch_3",
-			"targets": [
-				"root_3.rings"
-			]
-		}
-	]
 },
 	{
 		"name": "Color",

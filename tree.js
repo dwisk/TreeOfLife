@@ -93,5 +93,5 @@ new PixelNode({
 
 	},
 
-	mapping: "mapping/tree_mapping.js"
+	mapping: "mapping/simplemapping.json"
 });
