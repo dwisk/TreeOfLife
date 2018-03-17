@@ -1,0 +1,11 @@
+[
+	{
+		"name": "everything",
+		"pixelColorCorrection": false,
+    "matrix": true,
+    "sizeX": 1,
+    "sizeY": 512,
+    "rotate": false,
+    "flip": true
+	}
+]
