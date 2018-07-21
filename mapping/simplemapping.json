@@ -1,6 +1,21 @@
 [
-	{
+		{
 		"name": "everything",
+		"pixelColorCorrection": false,
+		"createStrips": true,
+		"strips": [
+			{ "serial": [{"nbr": 0, "from": 0, "to": 63}]},
+			{ "serial": [{"nbr": 0, "from": 64, "to": 127}]},
+			{ "serial": [{"nbr": 0, "from": 128, "to": 195}]},
+			{ "serial": [{"nbr": 0, "from": 196, "to": 255}]},
+			{ "serial": [{"nbr": 0, "from": 256, "to": 319}]},
+			{ "serial": [{"nbr": 0, "from": 320, "to": 383}]},
+			{ "serial": [{"nbr": 0, "from": 384, "to": 447}]},
+			{ "serial": [{"nbr": 0, "from": 448, "to": 511}]}
+		]
+	},
+	{
+		"name": "everything2",
 		"pixelColorCorrection": false,
 		"createStrips": true,
 		"strips": [

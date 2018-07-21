@@ -1,5 +1,12 @@
 [
 	{
+		"name": "TreeOfLife",
+		"default": true,
+		"title": "Tree of Life",
+		"icon": "entypo/adjust",
+		"module": "./games/TouchSelect"
+	},
+	{
 	"name": "Fire",
 	"default": true,
 	"title": "Two colored",
@@ -11,27 +18,20 @@
 		"touches": "touch.touches"
 	},
 	"queue": [
-		{ "effect": "Heartbeat", "duration": 60000 },
-		{ "effect": "RedBlue", "duration": 60000 },
-		{ "effect": "Ray", "duration": 60000 },
-		{ "effect": "RainBow", "duration": 60000 },
-		{ "effect": "Glitter", "duration": 60000 },
-		{ "effect": "ColouredRain", "duration": 60000 },
+		{ "effect": "RedBlue", "duration": 6000 }, 	
+		{ "effect": "Heartbeat", "duration": 6000 },
+		{ "effect": "Ray", "duration": 6000 },
+		{ "effect": "Glitter", "duration": 6000 },
+		{ "effect": "ColouredRain", "duration": 6000 },
 		{ "effect": "Fire", "duration": 60000 },
-		{ "effect": "Rain", "duration": 60000 }
+		{ "effect": "Rain", "duration": 6000 }
 	],
 	"queue2": [
-		{ "effect": "RainBowRings", "duration": 6000 }
+		{ "effect": "RainBowRings", "duration": 6000 },
+		{ "effect": "RainBow", "duration": 60000 }
 
 	]
 },
-	{
-		"name": "TreeOfLife",
-		"default": true,
-		"title": "Tree of Life",
-		"icon": "entypo/adjust",
-		"module": "./games/TouchSelect"
-	},
 
 	{
 		"name": "Cuts",

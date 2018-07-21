@@ -93,5 +93,5 @@ new PixelNode({
 
 	},
 
-	mapping: "mapping/simplemapping.json"
+	mapping: PixelNode.requireFile("./mapping/shrinemapping.js")
 });
