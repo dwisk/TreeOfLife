@@ -63,21 +63,6 @@ module.exports = [
 		]
 	},
 	{
-		"name": "RainBow",
-		"module": "../effects/PixelNode_Effect_Rainbow",
-		"scale": 1,
-		"speed": 100,
-		"outputs": [
-			{
-				"name": "rainbow",
-				"targets": [
-					"everything.rings"
-				]
-			}
-		],
-		"sound": { file: "Birds.mp3", volume: 100 }
-	},
-	{
 		"name": "RainBowRings",
 		"module": "../effects/PixelNode_Effect_Rainbow",
 		"scale": 1,
@@ -164,18 +149,6 @@ module.exports = [
 			}
 		]
 	},
-	{
-		"name": "Hands",
-		"module": "../effects/PixelNode_Effect_TwoColor",
-		"outputs": [
-			{
-				"name": "both",
-				"targets": [
-					"hands.rings"
-				]
-			}
-		]
-	},
 	
 	{
 		"name": "Branch3",
@@ -190,15 +163,19 @@ module.exports = [
 			}
 		]
 	},
-	{
+
+	{ // dick
 	"name": "Branch2",
 		"touch": "8",
-		"module": "./effects/Fire",
+		"module": "../effects/PixelNode_Effect_Rainbow",
+		"scale": 10,
+		"speed": 100,
+		
 		"outputs": [
 			{
-				"name": "ray",
+				"name": "rainbow",
 				"targets": [
-					"branch_2.strips"
+					"branch_2.rings"
 				]
 			}
 		]
@@ -206,13 +183,9 @@ module.exports = [
 
 
 	{
-	"name": "Branch1",
+	"name": "Branch1", // sign
 		"touch": "9",
-		"module": "../effects/PixelNode_Effect_ColouredRain",
-		"speed": 0,
-		"direction": 1,
-		"intensity": 0.25,
-		"fixedColor": [0,0,255],
+		"module": "./effects/Fire",
 		"outputs": [
 			{
 				"name": "ray",
@@ -223,17 +196,74 @@ module.exports = [
 		]
 	},
 
-	{
+	{ // Cunt
 		"name": "Branch0",
 		"touch": "11",
 		"module": "../effects/PixelNode_Effect_Rainbow",
+		"modulex": "../effects/PixelNode_Effect_RedBlue",
 		"scale": 1,
-		"speed": 100,
+		"speed": 1,
 		"outputs": [
 			{
 				"name": "rainbow",
 				"targets": [
-					"branch_0.rings"
+					"branch_0.strips"
+				]
+			}
+		]
+	},
+
+
+	// PARTS ----------------------------------------------------------------------
+
+	// Clitoris
+	{ 
+		"name": "clitoris",
+		"touch": "11",
+"module": "./effects/Heartbeat",
+		"scale": 10,
+		"speed": 20,
+		"outputs": [
+			{
+				"name": "rainbow",
+				"targets": [
+					"clitoris.rings",
+					"glans.rings"
+				]
+			}
+		]
+	},
+
+
+	// Minora
+	{ 
+		"name": "minora",
+"module": "./effects/Heartbeat",
+		"scale": 10,
+		"speed": 20,
+		"outputs": [
+			{
+				"name": "rainbow",
+				"targets": [
+					"minora.rings",
+					"corpus.rings"
+				]
+			}
+		]
+	},
+
+	// Majora
+	{ 
+		"name": "majora",
+"module": "./effects/Heartbeat",
+		"scale": 10,
+		"speed": 20,
+		"outputs": [
+			{
+				"name": "rainbow",
+				"targets": [
+					"majora.rings",
+					"scrotum.rings"
 				]
 			}
 		]
@@ -241,7 +271,70 @@ module.exports = [
 
 
 
+	// Vagina
+	{ 
+		"name": "vagina",
+"module": "./effects/Heartbeat",
+		"scale": 10,
+		"speed": 20,
+		"outputs": [
+			{
+				"name": "rainbow",
+				"targets": [
+					"vagina.rings"
+				]
+			}
+		]
+	},
 
+	// Uretha
+	{ 
+		"name": "uretha",
+		"module": "../effects/PixelNode_Effect_TwoColor",
+
+		"scale": 10,
+		"speed": 20,
+		"outputs": [
+			{
+				"name": "rainbow",
+				"targets": [
+					"uretha.rings"
+				]
+			}
+		]
+	},
+	
+	
+	{
+		"name": "Signs",
+		"module": "./effects/Fire",
+		"speed": 0,
+		"outputs": [
+			{
+				"name": "glow",
+				"targets": [
+					"branch_1.strips",
+					"branch_3.strips"
+				]
+			}
+		],
+		"sound": { file: "Fire.mp3", volume: 100 }
+	},
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	

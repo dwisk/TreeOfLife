@@ -93,5 +93,5 @@ new PixelNode({
 
 	},
 
-	mapping: PixelNode.requireFile("./mapping/shrinemapping.js")
+	mapping: PixelNode.requireFile("./mapping/digina.js")
 });

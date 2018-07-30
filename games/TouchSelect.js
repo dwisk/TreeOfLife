@@ -81,21 +81,22 @@ PixelNode_Game_TouchSelect.prototype.init = function() {
 	self.setEffectByName(self.options.defaultEffect);
 	
 	// remember branch effects
-  self.effectBranch[0] = self.getEffectByName("Branch0");
-  self.effectBranch[1] = self.getEffectByName("Branch1");
-  self.effectBranch[2] = self.getEffectByName("Branch2");
-  self.effectBranch[3] = self.getEffectByName("Branch3");
+  self.effectBranch[4] = self.getEffectByName("clitoris");
+  self.effectBranch[3] = self.getEffectByName("uretha");
+  self.effectBranch[2] = self.getEffectByName("majora");
+  self.effectBranch[1] = self.getEffectByName("minora");
+  self.effectBranch[0] = self.getEffectByName("vagina");
   
-    self.doEffectBranch = [true, true, true, true];
+    self.doEffectBranch = [true, true, true, true, true];
   
   // remember default & After effect
   self.defaultEffect = self.getEffectByName(self.options.defaultEffect);
   self.afterEffect = self.getEffectByName("Direction");
-  self.afterEffect2 = self.getEffectByName("Hands");
+  self.afterEffect2 = self.getEffectByName("Signs");
 
 	// initialize forced direction
   if (self.options.forceDirection) {
-    self.setActiveBranch(self.options.initialDirection);
+  //  self.setActiveBranch(self.options.initialDirection);
   }
 
   // if (self.options.afterEffect) {
@@ -134,10 +135,12 @@ PixelNode_Game_TouchSelect.prototype.effectSelector = function() {
 	// if we're not locked into an effect already
   if (!self.locked) {
   	// choose effect for all, depending on branch
-    if ((self.activeBranch == 0 || self.activeBranch == -1)) self.branchSelector(touches[10], 0, "RainBowRings", 10000); // "Heartbeat"
-    if ((self.activeBranch == 1 || self.activeBranch == -1)) self.branchSelector(touches[8], 1, "Rain", 10000); // "Fire"
-    if ((self.activeBranch == 2 || self.activeBranch == -1)) self.branchSelector(touches[9], 2, "Fire", 10000); // "Rain"
-    if ((self.activeBranch == 3 || self.activeBranch == -1)) self.branchSelector(touches[11], 3, "Heartbeat", 10000); // "RainBowRings"
+    if ((self.activeBranch == 0 || self.activeBranch == -1)) self.branchSelector(touches[0], 0, "RainBowRings", 10000); // "Heartbeat"
+    if ((self.activeBranch == 1 || self.activeBranch == -1)) self.branchSelector(touches[1], 1, "Rain", 10000); // "Fire"
+    if ((self.activeBranch == 2 || self.activeBranch == -1)) self.branchSelector(touches[2], 2, "Fire", 10000); // "Rain"
+    if ((self.activeBranch == 3 || self.activeBranch == -1)) self.branchSelector(touches[3], 3, "Heartbeat", 10000); // "RainBowRings"
+    if ((self.activeBranch == 4 || self.activeBranch == -1)) self.branchSelector(touches[4], 4, "Heartbeat", 10000); // "RainBowRings"
+
   }
   
   // if we got 4 touches, do the glitter!
@@ -147,7 +150,7 @@ PixelNode_Game_TouchSelect.prototype.effectSelector = function() {
 PixelNode_Game_TouchSelect.prototype.branchSelector = function(touched, number, effect, duration) {
   var self = this;
   //self.doEffectBranch[number] = false;
-	
+  
 	// if touched
   if (touched) { // branch3
 
@@ -227,8 +230,8 @@ PixelNode_Game_TouchSelect.prototype.resetTimers = function() {
 
 PixelNode_Game_TouchSelect.prototype.setActiveBranch = function(number) {
   var self = this;
-  if (number>3) number = 0;
-  if (number<0) number = 3;
+  if (number>4) number = 0;
+  if (number<0) number = 4;
   self.activeBranch = number;
   self.afterEffect.activeOutput = "branch_"+self.activeBranch;
   self.afterEffect.activeId = self.activeBranch;
@@ -252,7 +255,9 @@ PixelNode_Game_TouchSelect.prototype.draw = function() {
   if (!self.locked && self.doEffectBranch[1] && (self.activeBranch == 1 || self.activeBranch == -1)) self.effectBranch[1].draw();
   if (!self.locked && self.doEffectBranch[2] && (self.activeBranch == 2 || self.activeBranch == -1)) self.effectBranch[2].draw();
   if (!self.locked && self.doEffectBranch[3] && (self.activeBranch == 3 || self.activeBranch == -1)) self.effectBranch[3].draw();
-  if (!self.locked && self.afterEffect && self.options.forceDirection) self.afterEffect.draw();
+  if (!self.locked && self.doEffectBranch[4] && (self.activeBranch == 4 || self.activeBranch == -1)) self.effectBranch[4].draw();
+
+//  if (!self.locked && self.afterEffect && self.options.forceDirection) self.afterEffect.draw();
 
 	self.afterEffect2.draw();
 }
