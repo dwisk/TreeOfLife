@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "pixelnode": "^0.6.1",
+    "pixelnode": "0.6.2",
     "pixelnode-driver-fadecandy": "^0.0.4"
   },
   "devDependencies": {},

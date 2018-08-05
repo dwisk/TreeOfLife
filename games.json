@@ -18,7 +18,7 @@
 		"touches": "touch.touches"
 	},
 	"queue": [
-		{ "effect": "RedBlue", "duration": 6000 }, 	
+		{ "effect": "RedBlue", "duration": 6000 },
 		{ "effect": "Heartbeat", "duration": 6000 },
 		{ "effect": "Ray", "duration": 6000 },
 		{ "effect": "Glitter", "duration": 6000 },
